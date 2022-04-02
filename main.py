@@ -8,6 +8,7 @@ from libs.screens.homepage import HomePage
 class ECommerceShoeApp(MDApp):
     def build(self):
         Window.size = [330, 600]
+        print("ola mundo")
         return HomePage()
 
 
