@@ -8,8 +8,15 @@ from libs.screens.homepage import HomePage
 class ECommerceShoeApp(MDApp):
     def build(self):
         Window.size = [330, 600]
-        print("ola mundo 2234252")
+        self.load_all_kv_files()
         return HomePage()
+
+    def load_all_kv_files(self):
+        Builder.load_file("./libs/screens/homepage.kv")
+        Builder.load_file("./libs/components/appbar.kv")
+        Builder.load_file("./libs/components/products_dropdown.kv")
+        Builder.load_file("./libs/components/categories.kv")
+        Builder.load_file("./libs/components/circular_item.kv")
 
 
 if __name__ == "__main__":

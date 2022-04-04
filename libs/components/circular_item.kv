@@ -1,0 +1,27 @@
+<CircularItem@MDCard>:
+    size_hint: None, None
+    size: 200,300
+    elevation: 0
+
+    MDRelativeLayout:
+        size_hint: None, None
+        size: 60, 100
+
+        Circle:
+            radius: [50, ]
+
+            size:150, 150
+            md_bg_color: 1, 0, 0, 1
+
+        Circle:
+            radius: [50, ]
+            size:55, 55
+            md_bg_color: 1, 1, 1, 1
+
+<Circle@MDCard>
+    size_hint: None, None
+    elevation: 0
+    pos_hint: {"center_x": 0.5,"center_y": 0.6}
+
+
+

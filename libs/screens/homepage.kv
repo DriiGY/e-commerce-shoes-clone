@@ -1,1 +1,46 @@
-<HomePage>
+
+<HomePage>:
+    canvas.before:
+        Color:
+            rgba: 250/255, 250/255, 250/255, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    MDBoxLayout:
+        orientation: "vertical"
+
+        # App bar
+        AppBar:
+
+        # our product bar
+        ProductsDropdown:
+
+        # Button article bar
+
+        ButtonCategories:
+
+        ScrollView:
+
+            bar_width: 0
+
+            MDGridLayout:
+                cols:2
+                spacing:"15dp"
+                padding:"10dp"
+                size_hint_y: None
+                height: 600
+                width:self.minimum_width
+                # Items
+                CircularItem:
+                CircularItem:
+                CircularItem:
+                #MDCard:
+                #    radius: [10, ]
+
+
+
+
+
+
+
+

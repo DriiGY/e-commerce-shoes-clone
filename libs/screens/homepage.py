@@ -1,5 +1,6 @@
-from kivymd.uix.card import MDCard
+from kivymd.uix.screen import MDScreen
 
 
-class HomePage(MDCard):
-    """Homepage"""
+class HomePage(MDScreen):
+    """HomePage"""
+
