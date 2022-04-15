@@ -18,6 +18,10 @@ class ECommerceShoeApp(MDApp):
         Builder.load_file("./libs/components/categories.kv")
         Builder.load_file("./libs/components/circular_item.kv")
 
+    def on_start(self):
+        self.root.dispatch('on_enter')
+
+
 
 if __name__ == "__main__":
     ECommerceShoeApp().run()

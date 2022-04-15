@@ -1,27 +1,109 @@
+
+#:import utils kivy.utils
 <CircularItem@MDCard>:
+
     size_hint: None, None
-    size: 200,300
+    size: 150,300
     elevation: 0
+    radius:10
+    orientation:"vertical"
+    padding:"5dp"
+
+    MDBoxLayout:
+
+        #md_bg_color: 1, 0, 0, 1
+        size_hint: 1,0.1
+        pos_hint:{"center_x": 0.5, "center_y": 0.5}
+
+
+        MDLabel:
+            text:root.discount
+            font_size:16
+            text_size:self.size
+            halign:'left'
+            valign:'middle'
+            color: 0,0,0,1
+            bold: True
+
+        MDIconButton:
+            icon: 'cards-heart'
+            theme_text_color: "Custom"
+            text_color: 255/255,105/255,180/255, 1
+            pos_hint:{"center_x": 0.5, "center_y": 0.4}
 
     MDRelativeLayout:
-        size_hint: None, None
-        size: 60, 100
-
+        size_hint: 1,0.45
+        #size: self.parent.size
+        pos_hint:{"center_x": 0.5, "center_y": 0.5}
+        #md_bg_color: 0, 0, 0, 1
         Circle:
             radius: [50, ]
-
-            size:150, 150
-            md_bg_color: 1, 0, 0, 1
-
+            size:82, 82
+            md_bg_color: 244/255,216/255,200/255, 1
+            pos_hint:{"center_x": 0.45, "center_y": 0.55}
         Circle:
             radius: [50, ]
-            size:55, 55
+            size:73, 73
             md_bg_color: 1, 1, 1, 1
+            pos_hint:{"center_x": 0.45, "center_y": 0.55}
+        Circle:
+            radius: [50, ]
+            size:70, 70
+            md_bg_color: 244/255,216/255,200/255, 1
+            pos_hint:{"center_x": 0.45, "center_y": 0.55}
+
+
+        FitImage:
+            size_hint: None, None
+            size: 125, 125
+            source: root.avatar_card
+            #md_bg_color: 0, 0, 1, 1
+            radius: [15, ]
+            pos_hint:{"center_x": 0.6, "center_y": 0.62}
+
+
+    # Bottom of card and after snicker image
+    MDBoxLayout:
+        id:shoe_description
+        #md_bg_color: 1, 0, 0, 1
+        size_hint: 1,0.55
+        pos_hint:{"center_x": 0.5, "center_y": 0.5}
+        orientation:"vertical"
+
+        MDLabel:
+            text:root.name
+            font_size:16
+            text_size:self.size
+            halign:'center'
+            valign:'top'
+            color: 0,0,0,1
+            bold: True
+        MDLabel:
+            text:root.price
+            font_size:16
+            text_size:self.size
+            halign:'center'
+            valign:'center'
+            color: 0,0,0,1
+            bold: True
+
+
+        # ADD NEW BOXLAYOUT JUST FOR STARS OR IT GETS MESSED UP
+        MDBoxLayout:
+            id: shoe_star
+            size_hint: 1,0.8
+            #md_bg_color: 1, 1, 0, 1
+            pos_hint:{"center_x": 0.5, "center_y": 0.7}
+            orientation:"horizontal"
+
+
+
+
 
 <Circle@MDCard>
     size_hint: None, None
     elevation: 0
-    pos_hint: {"center_x": 0.5,"center_y": 0.6}
+    radius: 30
 
 
 
